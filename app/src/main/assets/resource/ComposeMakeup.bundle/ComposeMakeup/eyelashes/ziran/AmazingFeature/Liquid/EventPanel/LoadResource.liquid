@@ -1,0 +1,7 @@
+        if (this.APJScene.assetManager) {
+{% for resInfo in resourceArray %}
+            this.addResource("{{ resInfo.guid | valid: 'string' }}", this.APJScene.assetManager.SyncLoad("{{ resInfo.resPath | valid: 'string' }}"));
+{% endfor %}
+        } else {
+            console.error("AssertManager is undefined");
+        }

@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+def innerBuildFile = new File(rootDir, "gradle-config/inner/app_inner_build.gradle")
+if (innerBuildFile.exists()) {
+    apply from: innerBuildFile
+}
+
+android {
+
+    ndkVersion rootProject.ext.ndkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.effectsar.effectsarplatform"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+dependencies {
+    api project(":platform")
+    api rootProject.ext.libs["app-compat"]
+    api rootProject.ext.libs["kotlin-stdlib-jdk7"]
+    api rootProject.ext.libs["appcompat-resources"]
+    api rootProject.ext.libs["androidx-core"]
+    api rootProject.ext.libs["retrofit2"]
+    api rootProject.ext.libs["glide"]
+    api rootProject.ext.libs["material"]
+    api rootProject.ext.libs["constraint-layout"]
+}

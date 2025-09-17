@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.effectsar.labcv.effect.view.ColorListView
+        android:id="@+id/color_list_above"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/colorlistview_margin_bottom"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <com.effectsar.labcv.effect.view.RadioTextView
+            android:id="@+id/rt_intensity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            app:selected="true"
+            app:color="#30D8DB"
+            app:text="@string/beauty_face_whiten_intensity"
+            />
+        <com.effectsar.labcv.effect.view.RadioTextView
+            android:id="@+id/rt_cold_warm"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:selected="false"
+            app:color="#FBB02E"
+            app:text="@string/beauty_face_whiten_coldwarm"
+            />
+
+        <com.effectsar.labcv.effect.view.ProgressBar
+            android:id="@+id/pb1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_height="match_parent"
+            app:activeLineColor="@color/colorWhite"
+            app:circleRadius="10dp"
+            app:inactiveLineColor="@color/inactivie_progress_bg"
+            app:lineHeight="2dp"
+            app:textHeight="20dp"
+            app:textSize="12dp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/fragment_board"/>
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:orientation="vertical" >-->
+<!--        <include layout="@layout/fragment_identify"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"/>-->
+
+<!--        <include-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/height_board_bottom"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            layout="@layout/view_board_bottom"/>-->
+<!--    </LinearLayout>-->
+
+
+</LinearLayout>

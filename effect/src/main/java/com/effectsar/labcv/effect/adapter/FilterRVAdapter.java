@@ -1,0 +1,85 @@
+package com.effectsar.labcv.effect.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+import com.effectsar.labcv.common.adapter.ItemViewRVAdapter;
+import com.effectsar.labcv.common.view.SelectViewHolder;
+import com.effectsar.labcv.effect.model.EffectButtonItem;
+import com.effectsar.labcv.effect.model.FilterItem;
+
+import java.util.List;
+
+public class FilterRVAdapter extends ItemViewRVAdapter<FilterItem, SelectViewHolder>{
+
+    protected int mSelect = 0;
+    private boolean mShowIndex = false;
+    private boolean mPointChange = true;
+
+    public FilterRVAdapter(List<FilterItem> itemList, OnItemClickListener<FilterItem> listener) {
+        super(itemList, listener);
+    }
+
+    //  {zh} 此回调中使用定制ViewHolder的构造函数返回一个实例，inflate时可以使用不同的layout  {en} This callback uses the constructor of the custom ViewHolder to return an instance, a different layout can be used when inflating
+    @Override
+    public SelectViewHolder onCreateViewHolderInternal(ViewGroup parent, int viewType) {
+        return new SelectViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(com.effectsar.labcv.common.R.layout.view_holder_select_status, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolderInternal(SelectViewHolder holder, int position, FilterItem item) {
+        Context context = holder.itemView.getContext();
+
+        holder.setIcon(item.getIconId());
+        if (mShowIndex && position > 0){
+            holder.setTitle(getIndex(position));
+        }else {
+            holder.setTitle(context.getString(item.getTitleId()));
+
+        }
+        holder.setMarqueue(false);
+
+        holder.change(item.shouldHighLight());
+
+        holder.pointChange(item.shouldPointOn());
+
+    }
+
+    //  {zh} 需要adapter来记录item状态的情形需要实现此方法来更新adapter内的记录  {en} In situations where an adapter is required to record item status, this method needs to be implemented to update records within the adapter
+    @Override
+    public void changeItemSelectRecord(FilterItem item, int position) {
+        setSelect(position);
+    }
+
+    private String getIndex(int pos){
+        if (pos < 10){
+            return "0"+pos;
+        }else {
+            return Integer.toString(pos);
+        }
+    }
+
+    public void setShowIndex(boolean showIndex) {
+        this.mShowIndex = showIndex;
+    }
+
+    public FilterRVAdapter usePoint(boolean showPoint) {
+        mPointChange = showPoint;
+        return this;
+    }
+
+    public void setSelect(int select) {
+        if (mSelect != select) {
+            int oldSelect = mSelect;
+            mSelect = select;
+            notifyItemChanged(oldSelect);
+            notifyItemChanged(select);
+        }
+    }
+
+    public EffectButtonItem getSelectItem(){
+        return getItemList().get(mSelect);
+    }
+}

@@ -1,0 +1,3 @@
+rootProject.name = "EffectsARPlatform"
+include ':app'
+include ':platform'

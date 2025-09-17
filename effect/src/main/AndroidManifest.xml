@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.effectsar.labcv.effect">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <activity android:name=".activity.BeautyActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity android:name=".activity.HairDyeActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.StickerActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity android:name=".activity.QRScanActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.MattingStickerActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.BackgroundBlurActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.StyleMakeUpActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.LocalStyleMakeUpActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.StickerTestActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+def publishFile = rootProject.file("publish.gradle")
+if (publishFile.exists()) {
+    apply from: publishFile
+}
+
+android {
+//    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api rootProject.ext.libs["app-compat"]
+    api rootProject.ext.libs["kotlin-stdlib-jdk7"]
+    api rootProject.ext.libs["appcompat-resources"]
+    api rootProject.ext.libs["kotlinx-coroutines-core"]
+    api rootProject.ext.libs["kotlinx-coroutines-android"]
+    api rootProject.ext.libs["androidx-core"]
+    api rootProject.ext.libs["material"]
+    api rootProject.ext.libs["constraint-layout"]
+    api rootProject.ext.libs["recyclerview"]
+    api rootProject.ext.libs["retrofit2"]
+    api rootProject.ext.libs["glide"]
+    api rootProject.ext.libs["gson"]
+    api rootProject.ext.libs["okhttp"]
+    api rootProject.ext.libs["converter-gson"]
+}

@@ -1,0 +1,32 @@
+const {EventPanelUtils} = require('./EventPanelUtils');
+const {GraphUtils} = require('./GraphUtils');
+const {EventStateChain} = require('./EventStateChain');
+const {StateMachineSystem} = require('./StateMachineSystem');
+const {ConditionState, ActionState} = require('./EventState');
+const {EventTouchSystem} = require('./EventTouchSystem');
+const {EventVariable} = require('./EventVariable');
+const APJS = require('./amazingpro');
+
+// Event require start
+{% for chain in stateChainList %}
+    {{- chain.__class | registerElement: chain.__uniqueId  -}}
+    {% for state in chain.stateList %}
+        {{- state.__class | registerElement: state.__uniqueId  -}}
+        {% for trigger in state.triggerList %}
+            {{- trigger.name | registerElement: trigger.__uniqueId  -}}
+            {%- assign jsClsName = trigger.scriptFile | getJSClassName -%}
+            {%- assign hasRegistered = trigger.scriptFile | registerJsFile -%}
+            {% if hasRegistered == false %}
+                {{- trigger.scriptPath | includeAbsPath -}}
+const { {{- jsClsName | valid: 'name' -}} } = require("./{{ jsClsName | valid: 'name' }}");
+            {% endif %}
+            {% if  trigger.property %}
+                {%- assign hasRegisteredPropertyScript = trigger.property.scriptPath | registerJsFile -%}
+                {% if hasRegisteredPropertyScript == false %}
+                    {{- trigger.property.scriptPath | includeAbsPath -}}
+const { {{- trigger.property.script | valid: 'name' -}} } = require("./{{ trigger.property.script | valid: 'string'}}");
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,41 @@
+{
+  "titleDict": {
+    "en": "Beauty",
+    "zh": "美颜"
+  },
+  "defaultOn": 1,
+  "multipleSelection": true,
+  "composerNodes": [
+    {
+      "key": "whiten",
+      "intensity": 40,
+      "range": [
+        0,
+        100
+      ],
+      "slider_title": {
+        "en": "Intensity",
+        "zh": "程度"
+      }
+    },
+    {
+      "key": "warm",
+      "intensity": 50,
+      "range": [
+        0,
+        100
+      ],
+      "slider_title": {
+        "en": "Cool/Warm Tone",
+        "zh": "冷暖"
+      }
+    }
+  ],
+  "selectable_colors": [
+    "FFDD6363",
+    "FFF3939E",
+    "FFF18168",
+    "FFB63963",
+    "FFA10404"
+  ]
+}

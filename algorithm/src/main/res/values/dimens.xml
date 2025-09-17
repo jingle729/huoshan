@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hand_info_height">70dp</dimen>
+    <dimen name="distance_info_height">30dp</dimen>
+    <dimen name="pet_face_info_height">60dp</dimen>
+    <dimen name="pet_face_info_width">140dp</dimen>
+    <dimen name="general_object_info_height">30dp</dimen>
+    <dimen name="car_orientation_info_height">30dp</dimen>
+    <dimen name="bottom_bar_height">76dp</dimen>
+</resources>

@@ -1,0 +1,4430 @@
+{
+  "groups": [
+    {
+      "id": "hot",
+      "titleDict": {
+        "zh": "热门功能",
+        "en": "Hot Features"
+      },
+      "pages": [
+        {
+          "id": "beauty",
+          "titleDict": {
+            "zh": "美颜美型",
+            "en": "Beauty"
+          }
+        },
+        {
+          "id": "sticker",
+          "titleDict": {
+            "zh": "贴纸",
+            "en": "Sticker"
+          }
+        },
+        {
+          "id": "style_makeup",
+          "titleDict": {
+            "zh": "风格妆",
+            "en": "Advanced Makeup Set"
+          }
+        },
+        {
+          "id": "matting_bg",
+          "titleDict": {
+            "zh": "虚拟背景",
+            "en": "Virtual Background"
+          }
+        },
+        {
+          "id": "background_blur",
+          "titleDict": {
+            "zh": "背景虚化",
+            "en": "Background Blur"
+          }
+        },
+        {
+          "id": "live_gift",
+          "titleDict": {
+            "zh": "直播礼物",
+            "en": "live_gift"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pkgs",
+      "titleDict": {
+        "zh": "组合套餐",
+        "en": "Packages"
+      },
+      "pages": [
+        {
+          "id": "pkg_beauty_b1",
+          "titleDict": {
+            "zh": "美颜基础版-B1",
+            "en": "Beauty Basic B1"
+          }
+        },
+        {
+          "id": "pkg_beauty_b2",
+          "titleDict": {
+            "zh": "美颜基础版-B2",
+            "en": "Beauty Basic B2"
+          }
+        },
+        {
+          "id": "pkg_beauty_b3",
+          "titleDict": {
+            "zh": "美颜基础版-B3",
+            "en": "Beauty Basic B3"
+          }
+        },
+        {
+          "id": "pkg_beauty_a1",
+          "titleDict": {
+            "zh": "美颜高级版-A1",
+            "en": "Beauty Advance A1"
+          }
+        },
+        {
+          "id": "pkg_beauty_a2",
+          "titleDict": {
+            "zh": "美颜高级版-A2",
+            "en": "Beauty Advance A2"
+          }
+        },
+        {
+          "id": "pkg_beauty_a3",
+          "titleDict": {
+            "zh": "美颜高级版-A3",
+            "en": "Beauty Advance A3"
+          }
+        },
+        {
+          "id": "pkg_beauty_p1",
+          "titleDict": {
+            "zh": "美颜高级版-P1",
+            "en": "Beauty Pro P1"
+          }
+        },
+        {
+          "id": "pkg_beauty_p2",
+          "titleDict": {
+            "zh": "美颜高级版-P2",
+            "en": "Beauty Pro P2"
+          }
+        },
+        {
+          "id": "pkg_beauty_p3",
+          "titleDict": {
+            "zh": "美颜高级版-P3",
+            "en": "Beauty Pro P3"
+          }
+        },
+        {
+          "id": "pkg_beauty_p4",
+          "titleDict": {
+            "zh": "美颜高级版-P4",
+            "en": "Beauty Pro P4"
+          }
+        },
+        {
+          "id": "pkg_beauty_p5",
+          "titleDict": {
+            "zh": "美颜高级版-P5",
+            "en": "Beauty Pro P5"
+          }
+        },
+        {
+          "id": "pkg_sticker",
+          "titleDict": {
+            "zh": "贴纸SDK",
+            "en": "Sticker SDK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "effect",
+      "titleDict": {
+        "zh": "特效",
+        "en": "Effect"
+      },
+      "pages": [
+        {
+          "id": "beauty",
+          "titleDict": {
+            "zh": "美颜美型",
+            "en": "Beauty"
+          }
+        },
+        {
+          "id": "beauty_pro",
+          "titleDict": {
+            "zh": "美颜美型Pro",
+            "en": "Beauty Pro"
+          }
+        },
+        {
+          "id": "image_quality",
+          "titleDict": {
+            "zh": "画质",
+            "en": "Image Quality"
+          }
+        },
+        {
+          "id": "style_makeup",
+          "titleDict": {
+            "zh": "风格妆",
+            "en": "Advanced Makeup Set"
+          }
+        },
+        {
+          "id": "sticker",
+          "titleDict": {
+            "zh": "贴纸",
+            "en": "Sticker"
+          }
+        },
+        {
+          "id": "sticker_new",
+          "titleDict": {
+            "zh": "新颖贴纸",
+            "en": "Sticker New"
+          }
+        },
+        {
+          "id": "lite_game",
+          "titleDict": {
+            "zh": "小游戏",
+            "en": "lite_game"
+          }
+        },
+        {
+          "id": "live_gift",
+          "titleDict": {
+            "zh": "直播礼物",
+            "en": "live_gift"
+          }
+        },
+        {
+          "id": "animoji",
+          "titleDict": {
+            "zh": "虚拟头像",
+            "en": "animoji"
+          }
+        },
+        {
+          "id": "matting_bg",
+          "titleDict": {
+            "zh": "虚拟背景",
+            "en": "Virtual Background"
+          }
+        },
+        {
+          "id": "background_blur",
+          "titleDict": {
+            "zh": "背景虚化",
+            "en": "Background Blur"
+          }
+        },
+        {
+          "id": "matting_chroma_bg",
+          "titleDict": {
+            "zh": "绿幕背景",
+            "en": "Green Screen Background"
+          }
+        },
+        {
+          "id": "camera_movement",
+          "titleDict": {
+            "zh": "运镜",
+            "en": "Camera Movement"
+          }
+        }
+      ]
+    }
+  ],
+  "pageDetails": [
+    {
+      "id": "pkg_beauty_b1",
+      "panels": [
+        {
+          "key": "beauty_b1",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_b2",
+      "panels": [
+        {
+          "key": "beauty_b2",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_b3",
+      "panels": [
+        {
+          "key": "beauty_b1",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_a1",
+      "panels": [
+        {
+          "key": "beauty_b2",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_a2",
+      "panels": [
+        {
+          "key": "beauty_a2",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_a3",
+      "panels": [
+        {
+          "key": "beauty_a3",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "bodyshaping"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "bodyshaping",
+                "subItems": [
+                  {
+                    "uniqueId": "bodyshaping_leglength"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimwaist"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_p1",
+      "panels": [
+        {
+          "key": "beauty_p1",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_p2",
+      "panels": [
+        {
+          "key": "beauty_p1",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_p3",
+      "panels": [
+        {
+          "key": "beauty_p3",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_contour",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_contour_jingzhi"
+                      },
+                      {
+                        "uniqueId": "makeup_contour_shensui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eyebrows",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eyebrows_zhongse"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_chuhei"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_heise"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_xihei"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eye_naichase"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_meizihong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_qizhifen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_jiaotangzong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_wanxiahong"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pupil",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pupil_hunxunzong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_kekezong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_mitaofen"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_shuiguanghei"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_xingkonglan"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_chujianhui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_aegyo_sal",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_aegyo_sal_ziran"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_hair_dye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_hair_dye_anlan"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_molv"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_shenzhong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_p4",
+      "panels": [
+        {
+          "key": "beauty_p3",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_contour",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_contour_jingzhi"
+                      },
+                      {
+                        "uniqueId": "makeup_contour_shensui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eyebrows",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eyebrows_zhongse"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_chuhei"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_heise"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_xihei"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eye_naichase"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_meizihong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_qizhifen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_jiaotangzong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_wanxiahong"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pupil",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pupil_hunxunzong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_kekezong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_mitaofen"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_shuiguanghei"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_xingkonglan"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_chujianhui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_aegyo_sal",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_aegyo_sal_ziran"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_hair_dye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_hair_dye_anlan"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_molv"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_shenzhong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "root",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_beauty_p5",
+      "panels": [
+        {
+          "key": "beauty",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "bodyshaping"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "bodyshaping",
+                "subItems": [
+                  {
+                    "uniqueId": "bodyshaping_all"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimbody"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_leglength"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_legsize"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimwaist"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_breast"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_beautyhip"
+                  },
+                  {
+                    "uniqueId": "beautybody_swanneck"
+                  },
+                  {
+                    "uniqueId": "beautybody_slimarm"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_contour",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_contour_jingzhi"
+                      },
+                      {
+                        "uniqueId": "makeup_contour_shensui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eyebrows",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eyebrows_zhongse"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_chuhei"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_heise"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_xihei"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eye_naichase"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_meizihong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_qizhifen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_jiaotangzong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_wanxiahong"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pupil",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pupil_hunxunzong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_kekezong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_mitaofen"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_shuiguanghei"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_xingkonglan"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_chujianhui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_aegyo_sal",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_aegyo_sal_ziran"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_hair_dye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_hair_dye_anlan"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_molv"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_shenzhong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "image_quality",
+                "titleDict": {
+                  "zh": "画质",
+                  "en": "Image Quality"
+                },
+                "subItems": [
+                  {
+                    "uniqueId": "image_quality_temperature"
+                  },
+                  {
+                    "uniqueId": "image_quality_tone"
+                  },
+                  {
+                    "uniqueId": "image_quality_saturation"
+                  },
+                  {
+                    "uniqueId": "image_quality_brightness"
+                  },
+                  {
+                    "uniqueId": "image_quality_contrast"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pkg_sticker",
+      "panels": [
+        {
+          "key": "sticker_2d",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "贴纸2D",
+                "en": "Sticker 2D"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beauty",
+      "panels": [
+        {
+          "key": "beauty",
+          "bizLists": [
+            {
+              "key": "_beauty"
+            },
+            {
+              "key": "beauty"
+            },
+            {
+              "key": "reshape"
+            },
+            {
+              "key": "bodyshaping"
+            },
+            {
+              "key": "makeup"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_whiten_hongrun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_movnose"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "bodyshaping",
+                "subItems": [
+                  {
+                    "uniqueId": "bodyshaping_all"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimbody"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_leglength"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_legsize"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimwaist"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_breast"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_beautyhip"
+                  },
+                  {
+                    "uniqueId": "beautybody_swanneck"
+                  },
+                  {
+                    "uniqueId": "beautybody_slimarm"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_lipstick_shanhuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiyouse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_doushafen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_fuguhong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_zangjuse"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_xiguahong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_sironghong"
+                      },
+                      {
+                        "uniqueId": "makeup_lipstick_meizise"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_blusher_richang"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_tiancheng"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_xinji"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_qiaopi"
+                      },
+                      {
+                        "uniqueId": "makeup_blusher_shaishang"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_contour",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_contour_jingzhi"
+                      },
+                      {
+                        "uniqueId": "makeup_contour_shensui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eyebrows",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eyebrows_zhongse"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_chuhei"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_heise"
+                      },
+                      {
+                        "uniqueId": "makeup_eyebrows_xihei"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_eye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_eye_naichase"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_meizihong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_yuanqiju"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_qizhifen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_jiaotangzong"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_shaonvfen"
+                      },
+                      {
+                        "uniqueId": "makeup_eye_wanxiahong"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pupil",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pupil_hunxunzong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_kekezong"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_mitaofen"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_shuiguanghei"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_xingkonglan"
+                      },
+                      {
+                        "uniqueId": "makeup_pupil_chujianhui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_aegyo_sal",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_aegyo_sal_ziran"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_hair_dye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_hair_dye_anlan"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_molv"
+                      },
+                      {
+                        "uniqueId": "makeup_hair_dye_shenzhong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beauty_pro",
+      "panels": [
+        {
+          "key": "beauty_pro",
+          "bizLists": [
+            {
+              "key": "_beauty_pro"
+            },
+            {
+              "key": "beauty_pro"
+            },
+            {
+              "key": "reshape_pro"
+            },
+            {
+              "key": "bodyshaping"
+            },
+            {
+              "key": "makeup_pro"
+            },
+            {
+              "key": "hack"
+            }
+          ],
+          "uiTree": {
+            "uniqueId": "root",
+            "subItems": [
+              {
+                "uniqueId": "beauty_pro",
+                "subItems": [
+                  {
+                    "uniqueId": "beauty_pro_smooth"
+                  },
+                  {
+                    "uniqueId": "beauty_pro_whiten",
+                    "subItems": [
+                      {
+                        "uniqueId": "beauty_pro_whiten_ziran"
+                      },
+                      {
+                        "uniqueId": "beauty_pro_whiten_baixi"
+                      },
+                      {
+                        "uniqueId": "beauty_pro_whiten_fenbai"
+                      },
+                      {
+                        "uniqueId": "beauty_pro_whiten_xiaomaise"
+                      },
+                      {
+                        "uniqueId": "beauty_pro_whiten_meihei"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "beauty_pro_sharp"
+                  },
+                  {
+                    "uniqueId": "beauty_pro_clear"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "reshape_pro",
+                "subItems": [
+                  {
+                    "uniqueId": "reshape_pro_face",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_pro_slimface",
+                        "subItems": [
+                          {
+                            "uniqueId": "reshape_pro_slimface_nature"
+                          },
+                          {
+                            "uniqueId": "reshape_pro_slimface_girl"
+                          },
+                          {
+                            "uniqueId": "reshape_pro_slimface_boy"
+                          }
+                        ]
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_deformface"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_short"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_cutface"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_shrinkhead"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_cheekbone"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_jawbone"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_vface"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_chin"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_forehead"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_face_smilesfolds"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_pro_eye_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_pro_eye"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_height"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_width"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_move"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_spacing"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_lower_eyelid"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_pupil_size"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_inner_corner"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_outer_corner"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_rotate"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_brighten"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_pouch"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_eye_double"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_pro_nose_group",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_pro_nose"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_nose_wing"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_nose_bridge"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_movnose"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_nose_tip"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_nose_root"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_pro_brow",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_pro_brow_size"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_brow_position"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_brow_tile"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_brow_ridge"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_brow_distance"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_brow_width"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "reshape_pro_mouth",
+                    "subItems": [
+                      {
+                        "uniqueId": "reshape_pro_zoom_mouth"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_mouth_width"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_movmouth"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_mouthcorner"
+                      },
+                      {
+                        "uniqueId": "reshape_pro_whiten_teeth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "bodyshaping",
+                "subItems": [
+                  {
+                    "uniqueId": "bodyshaping_all"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimbody"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_leglength"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_legsize"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_slimwaist"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_breast"
+                  },
+                  {
+                    "uniqueId": "bodyshaping_beautyhip"
+                  },
+                  {
+                    "uniqueId": "beautybody_swanneck"
+                  },
+                  {
+                    "uniqueId": "beautybody_slimarm"
+                  }
+                ]
+              },
+              {
+                "uniqueId": "makeup_pro",
+                "subItems": [
+                  {
+                    "uniqueId": "makeup_pro_lipstick",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_lipstick_liangze"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_lipstick_wumian"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_lipstick_yaochun"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_lipstick_yunran"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_blusher",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_blusher_mitao"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_weixun"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_yuanqi"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_qise"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_shaishang"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_rixi"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_blusher_suzui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_contour",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_contour_ziran"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_contour_xiaov"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_contour_fajixian"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_contour_gaoguang"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_contour_yingjun"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_eyebrows",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_eyebrows_biaozhun"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyebrows_liuye"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyebrows_rongrong"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyebrows_yesheng"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_eye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_eye_dadizong"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eye_hanxi"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eye_nvshen"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eye_xingzi"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eye_bingtangshanzha"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_eyelash",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_eyelash_ziran"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelash_juanqiao"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelash_chibang"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelash_manhua"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelash_xiachui"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_eyelight",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_eyelight_ziranguang"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelight_yueyaguang"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_eyelight_juguangdeng"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_pupil",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_pupil_yuansheng"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_pupil_xinxinzi"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_pupil_huoxing"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_pupil_huilv"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_pupil_huitong"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_aegyo_sal",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_aegyo_sal_suyan"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_aegyo_sal_chulian"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_aegyo_sal_manhuayan"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_aegyo_sal_xiachui"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_aegyo_sal_taohua"
+                      }
+                    ]
+                  },
+                  {
+                    "uniqueId": "makeup_pro_hair_dye",
+                    "subItems": [
+                      {
+                        "uniqueId": "makeup_pro_hair_dye_anlan"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_hair_dye_molv"
+                      },
+                      {
+                        "uniqueId": "makeup_pro_hair_dye_shenzhong"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uniqueId": "hack",
+                "subItems": [
+                  {
+                    "uniqueId": "hack_smooth_native_skin"
+                  },
+                  {
+                    "uniqueId": "hack_face_contour_smooth"
+                  },
+                  {
+                    "uniqueId": "hack_face_plump"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "filter",
+          "bizLists": [
+            {
+              "key": "filter",
+              "titleDict": {
+                "zh": "人像",
+                "en": "Portrait"
+              }
+            },
+            {
+              "key": "filter_daily",
+              "titleDict": {
+                "zh": "日常",
+                "en": "Daily"
+              }
+            },
+            {
+              "key": "filter_cuisine",
+              "titleDict": {
+                "zh": "美食",
+                "en": "Food"
+              }
+            },
+            {
+              "key": "filter_landscape",
+              "titleDict": {
+                "zh": "风景",
+                "en": "Landscape"
+              }
+            },
+            {
+              "key": "filter_vintage",
+              "titleDict": {
+                "zh": "复古",
+                "en": "Retro"
+              }
+            },
+            {
+              "key": "filter_stylization",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Stylization"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image_quality",
+      "panels": [
+        {
+          "key": "image_quality",
+          "bizLists": [
+            {
+              "key": "image_quality",
+              "titleDict": {
+                "zh": "画质",
+                "en": "Image Quality"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style_makeup",
+      "panels": [
+        {
+          "key": "style_makeup",
+          "bizLists": [
+            {
+              "key": "advanced_makeup_set",
+              "titleDict": {
+                "zh": "风格妆",
+                "en": "Advanced Makeup Set"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sticker",
+      "panels": [
+        {
+          "key": "sticker",
+          "bizLists": [
+            {
+              "key": "sticker_2d",
+              "titleDict": {
+                "zh": "2D",
+                "en": "2D"
+              }
+            },
+            {
+              "key": "sticker_complex",
+              "titleDict": {
+                "zh": "复杂",
+                "en": "Complex"
+              }
+            },
+            {
+              "key": "sticker_3d",
+              "titleDict": {
+                "zh": "3D风格",
+                "en": "3D Style"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sticker_new",
+      "panels": [
+        {
+          "key": "sticker_new",
+          "bizLists": [
+            {
+              "key": "sticker_new_sytle",
+              "titleDict": {
+                "zh": "风格化",
+                "en": "Style"
+              }
+            },
+            {
+              "key": "sticker_new_3d_new",
+              "titleDict": {
+                "zh": "3D",
+                "en": "3D"
+              }
+            },
+            {
+              "key": "sticker_new_complex",
+              "titleDict": {
+                "zh": "复杂",
+                "en": "Complex"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lite_game",
+      "panels": [
+        {
+          "key": "sticker_lite_game",
+          "bizLists": [
+            {
+              "key": "sticker_lite_game",
+              "titleDict": {
+                "zh": "小游戏",
+                "en": "Lite Game"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "live_gift",
+      "panels": [
+        {
+          "key": "sticker_live_gift",
+          "bizLists": [
+            {
+              "key": "sticker_live_gift",
+              "titleDict": {
+                "zh": "直播礼物",
+                "en": "Live Gifts"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animoji",
+      "panels": [
+        {
+          "key": "sticker_animoji",
+          "bizLists": [
+            {
+              "key": "sticker_animoji",
+              "titleDict": {
+                "zh": "虚拟头像",
+                "en": "Avatar Drive"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matting_bg",
+      "panels": [
+        {
+          "key": "matting_bg",
+          "bizLists": [
+            {
+              "key": "matting_bg",
+              "titleDict": {
+                "zh": "虚拟背景",
+                "en": "Virtual Background"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "background_blur",
+      "panels": [
+        {
+          "key": "background_blur",
+          "bizLists": [
+            {
+              "key": "background_blur",
+              "titleDict": {
+                "zh": "背景虚化",
+                "en": "Background Blur"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matting_chroma_bg",
+      "panels": [
+        {
+          "key": "matting_chroma_bg",
+          "bizLists": [
+            {
+              "key": "chroma_matting_bg",
+              "titleDict": {
+                "zh": "绿幕背景",
+                "en": "Green Screen Background"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "camera_movement",
+      "panels": [
+        {
+          "key": "sticker_camera_movement",
+          "bizLists": [
+            {
+              "key": "sticker_camera_movement",
+              "titleDict": {
+                "zh": "运镜",
+                "en": "Camera Movement"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

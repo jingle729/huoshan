@@ -1,0 +1,7 @@
+{% for variable in variableList %}
+        var newVariable = new EventVariable('{{ variable.name | valid: 'string' }}', '{{ variable.type | valid: 'string' }}', {{ variable.value | getValueExpression }});
+        {% if variable.identifier %}
+        newVariable.identifier = '{{ variable.identifier | valid: 'string' }}';
+        {% endif %}
+        this.setVariable('{{ variable.__uniqueId | valid: 'string' }}', newVariable);
+{% endfor %}

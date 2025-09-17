@@ -1,0 +1,129 @@
+{% comment %} -------------------------------------network connection------------------------------------- {% endcomment %}
+        // hash value map
+        this.hashValueMap = new Map();
+        // regist hashValueList
+{% for edge in Edges %}
+    {% if edge.edgeValid %}
+        {% if edge.outputValueHashList %}
+            {%- assign isExist = edge.outputPort | isPortHashValueListExist -%}
+            {% if isExist == false %}
+            {{- edge.outputPort | registerPortHashValueList -}}
+        this.hashValueMap.set("{{edge.outputNode | getIdentifierById | valid: 'string' }}_{{edge.outputPortIndex | valid: 'number' }}",[
+                {% for valueItem in edge.outputValueHashList %}
+            {source: "{{valueItem.source | valid: 'string' }}", value: "{{valueItem.value | valid: 'string' }}"}, 
+                {% endfor %}
+        ]);   
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+{% if isSubgraph == false %}
+        // init map to store if edge is in circle
+        ControlFlow.clearEdgeIsInCircle();
+{% endif %}
+{% for edge in Edges %}
+    {% if edge.edgeValid and edge.isInCircle %}
+        ControlFlow.setEdgeIsInCircle("{{edge.__uniqueId | valid: 'string' }}", {{edge.isInCircle | valid: 'boolean'}});
+    {% endif %}
+{% endfor %}
+        //node connection
+{%- assign edgeIdx = 0 -%}
+{% for edge in Edges %}
+    {%- assign edgeIdx = edgeIdx | plus: 1 -%}
+    {% if edge.edgeValid %}
+        {%- assign isExist = edge.__uniqueId | isEdgeExist -%}
+        {% if isExist == false %}
+            {{- edge | registerEdge -}}
+                {% if edge.inputPortType == "Pulse" %}
+                {%- assign isConnected = edge | hasPortPairConnection -%}
+                    {% if isConnected == false%}
+        var executeFunc_{{edgeIdx | valid: 'number'}} = ()=>{
+                        {% if edge.inputBoundary == true %}
+            const controlFlow = this.currentControlFlow;
+                        {% elsif edge.inputPortVirtual == true %}
+                        {% else %}
+            const controlFlow = this.nodes["{{edge.inputNode | getIdentifierById | valid: 'string' }}"].currentControlFlow;
+                        {% endif %}
+                        {% if edge.outputBoundary == true %}
+            this.currentControlFlow = controlFlow;
+                        {% elsif edge.outputPortVirtual == true %}
+                        {% else %}
+            this.nodes["{{edge.outputNode | getIdentifierById | valid: 'string' }}"].currentControlFlow = controlFlow;
+                        {% endif %}
+            const execFunc = () => {
+                        {% if isPreview %}
+                            {% if edge.MergedInputPortsList %}
+                                {% for triggerPortId in edge.MergedInputPortsList %}
+                this.setWatchValue("{{triggerPortId | valid: 'string' }}", true, true);
+                                {% endfor %}
+                            {% else %}
+                this.setWatchValue("{{edge.outputPort | valid: 'string' }}", true, true);
+                            {% endif %}
+                        {% endif %}
+                        {% if edge.outputBoundary == true %}
+                if( this.nexts[{{edge.outputPortIndex | valid: 'number' }}]) {
+                    this.nexts[{{edge.outputPortIndex | valid: 'number' }}]();
+                }
+                        {% elsif edge.outputPortVirtual == true %}
+                        {% else %}
+                this.nodes["{{edge.outputNode | getIdentifierById | valid: 'string' }}"].execute({{edge.outputPortIndex | valid: 'number' }});
+                        {% endif %}
+            }
+            controlFlow.tmpPush("{{edge.__uniqueId | valid: 'string' }}", execFunc);
+                {{- edge | registerPortConnection -}}
+        }
+                        {% if edge.inputBoundary == true %}
+        this.setTask({{edge.inputPortIndex | valid: 'number' }},  executeFunc_{{edgeIdx | valid: 'number'}});
+                        {% elsif edge.inputPortVirtual == true %}
+                        {% comment %} --------------------Input Virtual------------------------- {% endcomment %}
+                        {% else %}
+        
+        this.nodes["{{edge.inputNode | getIdentifierById | valid: 'string' }}"].setNext({{edge.inputPortIndex | valid: 'number' }}, executeFunc_{{edgeIdx | valid: 'number'}});
+                        {% endif %}
+                    {% endif %}
+                {% else %}
+        var outPutFunc_{{edgeIdx | valid: 'number'}} = ()=>{
+                    {% if edge.inputBoundary == true %}
+            var __portValue = this.inputs[{{edge.inputPortIndex | valid: 'number' }}]();
+                    {% else %}
+                        {% if edge.inputPortVirtual == true and edge.inputPortMetaData %}
+            var __portValue = {{ edge.inputPortMetaData | getPortValueExpression }};
+                        {% else %}
+            var __portValue = this.getOutputByPort("{{edge.inputNode | getIdentifierById | valid: 'string' }}",{{edge.inputPortIndex | valid: 'number' }},{{ edge.inputPortType | getDefaultValueExpression }});
+                        {% endif %}
+                    {% endif %}
+                    {% if edge.outputValueHashList %}
+            var hashValueList = this.hashValueMap.get("{{edge.outputNode | getIdentifierById | valid: 'string' }}_{{edge.outputPortIndex | valid: 'number' }}");
+            var hashName = GraphUtils.getHashedName(__portValue);
+            var hashValue = hashValueList.find(ele=>ele.value === hashName);
+            if(hashValue){
+                __portValue = hashValue.source;
+            }
+                    {% endif %}
+                    {% if isPreview and supportedPreviewDataType%}
+                        {%- assign isSupportType = supportedPreviewDataType | contained: edge.inputPortType -%}
+                        {% if isSupportType and isPreview %}
+            if (__portValue !== null) {
+                this.setWatchValue("{{edge.outputPort | valid: 'string' }}", __portValue);
+            }
+                        {% elsif edge.outputPortType == "Enum" and isPreview %}
+            if (__portValue !== null) {
+                this.setWatchValue("{{edge.outputPort | valid: 'string' }}", __portValue);
+            }
+                        {% endif %}
+                    {% endif %}
+            return __portValue;
+        }
+                    {% if edge.outputBoundary == true %}
+        this.outputs[{{edge.outputPortIndex | valid: 'number' }}] =  outPutFunc_{{edgeIdx | valid: 'number'}};
+                    {% elsif edge.outputPortVirtual == true %}
+                    {% comment %} --------------------Output Virtual------------------------- {% endcomment %}
+                    {% else %}
+        this.nodes["{{edge.outputNode | getIdentifierById | valid: 'string' }}"].setInput({{ edge.outputPortIndex | valid: 'number' }},  outPutFunc_{{edgeIdx | valid: 'number' }});
+                    {% endif %}
+                {% endif %}
+        {% endif %}
+    {% else %}
+        // error connection {{ edge.__uniqueId | valid: 'string' }}
+    {% endif %}
+{% endfor %}

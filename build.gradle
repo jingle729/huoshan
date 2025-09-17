@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: "./versions.gradle"
+    repositories {
+        // 阿里云镜像
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        // 腾讯云镜像
+        maven { url = uri("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/") }
+        google()
+        jcenter()
+        mavenCentral()
+        // vehook_add_maven don't delete this line
+        maven { url "https://www.jitpack.io" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.1.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        // 阿里云镜像
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        // 腾讯云镜像
+        maven { url = uri("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/") }
+        google()
+        mavenCentral()
+        // vehook_add_maven don't delete this line
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.byted.org/repository/android_public/' }
+        flatDir {
+            dirs project(':library_core').file('libs')
+        }
+    }
+
+//    configurations.configureEach {
+//        resolutionStrategy.dependencySubstitution {
+//            substitute module("com.volcengine.effectone:base-utils") with project(":base-utils")
+//            substitute module("com.volcengine.effectone:base-ui") with project(":base-ui")
+//            substitute module("com.volcengine.effectone:base-data") with project(":base-data")
+//            substitute module("com.volcengine.effectone:base-network") with project(":base-network")
+//            substitute module("com.volcengine.effectone:base-resource") with project(":base-resource")
+//            substitute module("com.volcengine.effectone:base-resource-loader") with project(":base-resource-loader")
+//        }
+//    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    TARGET_ARCH_ABI = findProperty("TARGET_ARCH_ABI") ?: "arm64-v8a"
+    // {zh} TOB 定制开始 {en} TOB customization begins
+    EXTRA_ARCH_ABI = findProperty("EXTRA_ARCH_ABI") ?: "armeabi-v7a"
+    // {zh} TOB 定制结束 {en} End of TOB customization
+}
+
+

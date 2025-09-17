@@ -1,0 +1,48 @@
+{% if supportedPreviewDataType%}
+    {% for edge in Edges %}
+        {%- assign isSupportType = supportedPreviewDataType | contained: edge.outputPortType -%}
+        {% if edge.edgeValid and isSupportType %}
+                {% if edge.inputBoundary == true %}
+            var __portValue = this.inputs[{{edge.inputPortIndex | valid: 'number' }}]();
+                {% else %}
+                    {% if edge.inputPortVirtual == true and edge.inputPortMetaData %}
+            var __portValue = {{ edge.inputPortMetaData | getPortValueExpression }};
+                    {% else %}
+            var __portValue = this.getOutputByPort("{{edge.inputNode | getIdentifierById | valid: 'string' }}",{{edge.inputPortIndex | valid: 'number' }},{{ edge.inputPortType | getDefaultValueExpression }});
+                    {% endif %}
+                {% endif %}
+                {% if edge.outputValueHashList %}
+            var hashValueList = this.hashValueMap.get("{{edge.outputNode | getIdentifierById | valid: 'string' }}_{{edge.outputPortIndex | valid: 'number' }}");
+            var hashName = GraphUtils.getHashedName(__portValue);
+            var hashValue = hashValueList.find(ele=>ele.value === hashName);
+            if(hashValue){
+                __portValue = hashValue.source;
+            }
+                {% endif %}
+                {% if supportedPreviewDataType %}
+                    {%- assign isSupportType = supportedPreviewDataType | contained: edge.inputPortType -%}
+                    {% if isSupportType %}
+            if (__portValue !== null) {
+                        {% if edge.MergedInputPortsList %}
+                            {% for triggerPortId in edge.MergedInputPortsList %}
+            this.setWatchValue("{{triggerPortId | valid: 'string' }}", __portValue);
+                            {% endfor %}
+                        {% else %}
+            this.setWatchValue("{{edge.outputPort | valid: 'string' }}", __portValue);
+                        {% endif %}
+            }
+                    {% elsif edge.outputPortType == "Enum" %}
+            if (__portValue !== null) {
+                        {% if edge.MergedInputPortsList %}
+                            {% for triggerPortId in edge.MergedInputPortsList %}
+            this.setWatchValue("{{triggerPortId | valid: 'string' }}", __portValue);
+                            {% endfor %}
+                        {% else %}
+            this.setWatchValue("{{edge.outputPort | valid: 'string' }}", __portValue);
+                        {% endif %}
+            }
+                    {% endif %}
+                {% endif %}
+        {% endif %}
+    {%endfor%}
+{% endif %}

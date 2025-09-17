@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="eo_recorder_bottom_container_height">@dimen/eo_base_bottom_container_height</dimen>
+    <dimen name="eo_recorder_record_button_size">96dp</dimen>
+    <dimen name="eo_recorder_download_icon_size">52dp</dimen>
+    <dimen name="ebox_setting_item_height">48dp</dimen>
+
+    <dimen name="switch_boe_button_height">24dp</dimen>
+    <dimen name="switch_boe_button_radius">12dp</dimen>
+
+    <dimen name="eo_recorder_countdown_text_size">144dp</dimen>
+    <integer name="eo_recorder_countdown_text_weight">800</integer>
+
+    <dimen name="eo_editor_image_quality_custom_item_size">28dp</dimen>
+</resources>

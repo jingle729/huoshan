@@ -1,0 +1,24 @@
+
+    {% for resInfo in resourcePathMap %}
+        if (this.APJScene.assetManager) {
+            this.resource["{{resInfo[0] | valid: 'string' }}"] = this.APJScene.assetManager.SyncLoad("{{resInfo[1] | valid: 'string' }}");
+        } else {
+            console.error("AssertManager is undefined");
+        }
+    {% endfor %}
+    {% assign hasSharedMaterialProperty = false %}
+    {% for script in propertyScript %}
+        {% if script == "SharedMaterials" %}
+            {% assign hasSharedMaterialProperty = true %}
+        {% endif %}
+    {% endfor %}
+    {% if hasSharedMaterialProperty == true %}
+       {% for object in materialMap %}
+        if (this.APJScene.assetManager) {
+            const aObject = this.APJScene.assetManager.SyncLoad("{{object[1] | valid: 'string' }}");
+            SharedMaterials.materialMap.set("{{object[0] | valid: 'string' }}", aObject);
+        } else {
+            console.error("AssertManager is undefined");
+        }
+       {% endfor %}
+    {% endif %}

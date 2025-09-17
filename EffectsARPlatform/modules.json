@@ -1,0 +1,8 @@
+[
+  {
+    "name": ":platform",
+    "publishable": true,
+    "path": "platform",
+    "attachName": "platform"
+  }
+]

@@ -1,0 +1,16 @@
+const { BaseGroup } = require('./BaseGroup');
+const { GraphUtils } = require("./GraphUtils");
+const { ControlFlow } = require("./ControlFlow");
+const APJS = require('./amazingpro');
+
+{% for subgraph in subgraphList %}
+    {% render "nodeRequire" , Nodes: subgraph.nodeList , disableSubgraphRequire: true %}
+{% endfor%}
+
+{% render "propertyFuncRequire" with propertyScript as PropertyScripts %}
+
+{% render 'subgraph' for subgraphList as SubgraphData %}
+
+{% for subgraph in subgraphList %}
+exports.{{ subgraph.subgraphName | valid: 'name' }} = {{ subgraph.subgraphName | valid: 'name' }};
+{% endfor%}

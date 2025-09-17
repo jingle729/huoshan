@@ -1,0 +1,104 @@
+const {GraphUtils} = require('./GraphUtils');
+const APJS = require('./amazingpro');
+const {AmazEventListener} = require('./AmazEventListener');
+const JSAssetRuntimeManager = require('./JSAssetRuntimeManager');
+const {EffectReset} = require('./EffectReset');
+
+class GraphManager {
+  constructor() {
+    this.scene = null;
+    this.APJScene = null;
+    this.graphCnt = 0;
+  }
+  static getInstance() {
+    if (!GraphManager._instance) {
+      GraphManager._instance = new GraphManager();
+    }
+    return GraphManager._instance;
+  }
+
+  variableInit(){
+      {% render "variableInit", variableList: globalVariableList , variableResourceMap: variableResourceMap , arrayVariableRes:arrayVariableRes %}
+  }
+
+  init(scene){
+    if(this.graphCnt >0){
+      this.graphCnt++;
+      return;
+    }
+    this.scene = scene;
+    if (this.scene) {
+      this.APJScene = new APJS.Scene(this.scene);
+    }
+    this.graphCnt++;
+    // reset map
+    this.setterNodeGuidMap = new Set();
+    this.setterNodeInitValueMap = EffectReset.getInstance().propertyInitValueMap;
+    this.JSAssetAObjectGuidMap = new Set();
+    this.JSAssetAObjectInitValueMap = EffectReset.getInstance().JSAssetAObjectInitValueMap;
+    // global variable
+    this.variableInitValue = {};
+    this.variables = {};
+    this.variableInit();
+    // other config
+    this.resource = {};
+    this.platform = "{{platform | valid: 'string' }}";
+    this.arch = "{{arch | valid: 'string' }}";
+    this.layerNameMap = {}
+    {% for layer in layerNameMap %}
+    this.layerNameMap[{{forloop.index0 | valid: 'number' }}] = "{{layer | valid: 'string' }}";
+    {% endfor %}
+  }
+
+  reset() {
+    this.variableInit();
+    // Reset General Setter Nodes
+    this.setterNodeInitValueMap.forEach((propertyMap, identity) => {
+      let engineObject = null;
+      if (identity instanceof APJS.Guid) {
+        engineObject = APJS.AmazingUtil.guidToPointer(identity);
+      } else {
+        const [guid, property] = identity.split('|');
+        engineObject = GraphUtils.guidToPointer(undefined, undefined, guid);
+      }
+      if (engineObject) {
+        GraphUtils.apply(
+          null,
+          () => {
+            propertyMap.forEach((functionArgs, callbackFunc) => {
+              callbackFunc(engineObject, ...functionArgs);
+            });
+          },
+          'resetProperty'
+        );
+      }
+    });
+    // Reset JSAsset
+    this.JSAssetAObjectInitValueMap.forEach((propertyMap, guid) => {
+      const AObject = APJS.AmazingUtil.guidToPointer(guid);
+      if (AObject) {
+        const JSAssetScriptObject = JSAssetRuntimeManager.instance().getAsset(AObject);
+        if (JSAssetScriptObject) {
+          propertyMap.forEach((functionArgs, callbackFunc) => {
+            callbackFunc(JSAssetScriptObject, ...functionArgs);
+          });
+        }
+      }
+    });
+  }
+
+  onDestroy() {
+    this.scene = null;
+    this.APJScene = null;
+    this.graphCnt--;
+    this.variabeles = {};
+    this.setterNodeInitValueMap.clear();
+    this.JSAssetAObjectInitValueMap.clear();
+    this.resource = {};
+    if(this.graphCnt === 0){
+      GraphManager._instance = null;
+    }
+  }
+}
+
+exports.GraphManager = GraphManager;

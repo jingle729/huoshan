@@ -1,0 +1,37 @@
+class {{ SubgraphData.subgraphName | valid: 'name' }} extends BaseGroup {
+    onInit(sys) {
+        // variable init
+        {% for variable in SubgraphData.localVariableList %}
+        this.localVariables["{{variable.__uniqueName | valid: 'string' }}"] = this.sys.variables["{{variable.__uniqueName | valid: 'string' }}"];
+        {% endfor %}
+        //node init
+        {% render "nodeInit" , Nodes: SubgraphData.nodeList , isPreview: SubgraphData.isPreview %}
+        {% render "AudioNodeInit" , Nodes: SubgraphData.nodeList , isPreview: SubgraphData.isPreview %}
+        {% render "nodeConnect" , Edges: SubgraphData.edgeList , isPreview: SubgraphData.isPreview , supportedPreviewDataType: SubgraphData.supportedPreviewDataType , isSubgraph: true %}
+        //init callback table
+{% for node in SubgraphData.nodeList %}
+    {% if node.__class == 'PlaceholderNode' or node.__class == 'CommentNode' or node.__class == "InstanceGroup"%}
+        {% continue %}
+    {% endif %}
+    {% if node.onCallback %}
+        {% for callback in node.onCallback %}
+        this.callbackNode["{{ callback | valid: 'string' }}"].push(this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"]);
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+        super.onInit(sys);
+    }
+
+    onReady(sys){
+        //audio connect
+        {% render "AudioNodeConnect" , Edges: SubgraphData.edgeList %}
+        super.onReady(sys);
+    }
+
+    onUpdate(sys, dt) {
+        super.onUpdate(sys, dt);
+        {% if SubgraphData.isPreview %}
+        {% render "updataPortData" , Edges: SubgraphData.edgeList , supportedPreviewDataType: SubgraphData.supportedPreviewDataType %}
+        {% endif %}
+    }
+};

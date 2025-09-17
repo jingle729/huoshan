@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EffectOne" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="EffectOne.Camera" parent="EffectOne" />
+
+    <style name="EffectOne.Camera.AlbumRoundedStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="EffectOne.StyleMakeUpRoundedStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+
+</resources>

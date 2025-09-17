@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_sr_not_support">视频超分只支持高通处理器，且需要660以上</string>
+    <string name="onekey_not_support">一键画质增强只支持Android 8及以上</string>
+    <string name="video_lens_pixel_not_support">画质不支持当前设备</string>
+    <string name="video_sr_resolution_not_support">超分目前只支持720p及以下分辨率</string>>
+    <string name="slam_follow_open">开启跟随模式</string>
+    <string name="slam_follow_close">关闭跟随模式</string>
+    <string name="saliency_matting_not_support">显著性分割只支持Android 8及以上</string>
+
+</resources>

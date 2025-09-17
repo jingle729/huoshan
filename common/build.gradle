@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion  rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //vehook_add don't delete this line
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    api project(':core')
+    api project(':resource')
+    api project(':platform')
+
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["support-v4"]
+    api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support["recyclerview-v7"]
+    api rootProject.ext.support["support-fragment"]
+    api rootProject.ext.support["constraint-layout"]
+
+    api rootProject.ext.libs["gson"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["smoothprogressbar"]
+    api rootProject.ext.dependencies["smoothprogressbar-circle"]
+    api rootProject.ext.dependencies["okhttp"]
+
+    api rootProject.ext.libs["immersionbar"]
+    api rootProject.ext.libs["immersionbar-ktx"]
+    api rootProject.ext.libs["kotlinx-coroutines-core"]
+    api rootProject.ext.libs["kotlinx-coroutines-android"]
+    api rootProject.ext.libs["app-compat"]
+    implementation rootProject.ext.libs["rxjava"]
+    implementation rootProject.ext.libs["rxandroid"]
+    implementation rootProject.ext.libs["rxkotlin"]
+    implementation rootProject.ext.libs["rxrelay"]
+}

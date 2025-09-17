@@ -1,0 +1,54 @@
+include ':core'
+include ':common'
+include ':sports'
+include ':lens'
+include ':effect'
+include ':algorithm'
+include ':app'
+include ':ebox-module'
+include ':library_core'
+//include ':effect-sdk'
+
+Properties properties = new Properties()
+def propFile = new File("$rootDir/gradle.properties")
+def effect_source = false
+if (propFile.exists()) {
+    InputStream inputStream = new FileInputStream(propFile);
+    properties.load(inputStream)
+    def obj_effect_resource = properties.getProperty('effect_source')
+    if (obj_effect_resource != null) {
+        effect_source = obj_effect_resource.toBoolean()
+    } else {
+        effect_source = false
+    }
+}
+//def build_para='LABCV_TOB_STANDARD'
+if (effect_source){
+    include  ':effect-sdk'
+    project(':effect-sdk').projectDir = new File('../../../../../effect_sdk/Demos/AndroidDemo/effectAAR')
+}
+
+include ':resource'
+include ':platform'
+project(':platform').projectDir = new File('./EffectsARPlatform/platform/')
+
+//include ':base-resource'
+//project(':base-resource').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-resource')
+//
+//include ':base-resource-loader'
+//project(':base-resource-loader').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-resource-loader')
+//
+//include ':base-network'
+//project(':base-network').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-network')
+//
+//include ':base-utils'
+//project(':base-utils').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-utils')
+//
+//include ':base-ui'
+//project(':base-ui').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-ui')
+//
+//include ':base-data'
+//project(':base-data').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/EOBaseKit-Android/base-data')
+//
+//include ':local-album'
+//project(':local-album').projectDir = new File('/Users/bytedance/BitsStudioProjects/MR-7333713-F14A7/CKEditor-Android/local-album')

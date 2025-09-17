@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_sr_not_support">Only Qualcomm processors later than 660 can be supported by Super Resolution</string>
+    <string name="onekey_not_support">一One key algo support Android 8 and higher</string>
+    <string name="video_lens_pixel_not_support">Current devices are not supported by Super Resolution.</string>
+    <string name="video_sr_resolution_not_support">Resolution greater than 720p is not supported by Super Resolution.</string>
+    <string name="slam_follow_open">Enable Follow Mode</string>
+    <string name="slam_follow_close">Disable Follow Mode</string>
+    <string name="saliency_matting_not_support">Saliency matting only support Android 8 and higher</string>
+
+</resources>

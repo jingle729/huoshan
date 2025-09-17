@@ -1,0 +1,41 @@
+    // init all variables
+    {% for variable in variableList %}
+        this.variableInitValue["{{variable.__uniqueName | valid: 'string'}}"] = {{variable | getVariableValueExpression}};
+        this.variables["{{variable.__uniqueName | valid: 'string'}}"] = {{variable | getVariableValueExpression}};
+    {% endfor %}
+
+    {% for variableRes in variableResourceMap %}
+        if (this.APJScene.assetManager) {
+        {% if variableRes.isArray %}
+            this.variableInitValue["{{variableRes.__uniqueName | valid: 'string'}}"] = [];
+            this.variables["{{variableRes.__uniqueName | valid: 'string'}}"] = [];
+            {% for texPath in variableRes.texturePathList %}
+            var res = this.APJScene.assetManager.SyncLoad("{{ texPath | valid: 'string' }}");
+            this.variableInitValue["{{variableRes.__uniqueName | valid: 'string'}}"].push(res);
+            this.variables["{{variableRes.__uniqueName | valid: 'string'}}"].push(res);
+            {% endfor %}
+        {% else %}
+            var res = this.APJScene.assetManager.SyncLoad("{{ variableRes.texturePath | valid: 'string' }}");
+            this.variableInitValue["{{variableRes.__uniqueName | valid: 'string'}}"] = res;
+            this.variables["{{variableRes.__uniqueName | valid: 'string'}}"] = res;
+        {% endif %}
+        } else {
+            console.error("AssertManager is undefined");
+        }
+    {% endfor %}
+
+    {% for variable in variableList %}
+        {% if variable.showInPanel == true %}
+        this.variableTypeMap.set("{{variable.__uniqueName | valid: 'string'}}", "{{variable.variableType | valid: 'string'}}");
+        var componentValue = this.getComponentValue("{{variable.__uniqueName | valid: 'string'}}");
+        if (componentValue === undefined) {
+            {% if variable.isArray == true %}
+            componentValue = [];
+            {% else %}
+            componentValue = {{variable | getVariableValueExpression}}
+            {% endif %}
+        }
+        this.variableInitValue["{{variable.__uniqueName | valid: 'string'}}"] = componentValue;
+        this.variables["{{variable.__uniqueName | valid: 'string'}}"] = componentValue;
+        {% endif %}
+    {% endfor %}

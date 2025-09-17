@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ProgressTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorBg</item>
+    </style>
+
+    <style name="VersionCheckDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/color_brand_6</item>
+    </style>
+</resources>

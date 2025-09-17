@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'com.effectsar.labcv.ebox'
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField "boolean", "EBOX_ENABLE_ONLINE", EBOX_ENABLE_ONLINE
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+}
+
+dependencies {
+    //noinspection [ByDesign1.5]LocalDependency
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    api project(':core')
+    api project(":common")
+    api project(":core")
+//    api project(":effect")
+
+//    api project(":base-resource")
+//    api project(":base-resource-loader")
+//    api project(":base-network")
+//    api rootProject.ext.libs["keva"]
+
+    api rootProject.ext.libs["app-compat"]
+    api rootProject.ext.libs["immersionbar"]
+    api rootProject.ext.libs["immersionbar-ktx"]
+    api rootProject.ext.libs["kotlinx-coroutines-core"]
+    api rootProject.ext.libs["kotlinx-coroutines-android"]
+    implementation rootProject.ext.libs["gson"]
+    implementation rootProject.ext.libs["rxjava"]
+    implementation rootProject.ext.libs["rxkotlin"]
+    implementation rootProject.ext.libs["rxandroid"]
+}

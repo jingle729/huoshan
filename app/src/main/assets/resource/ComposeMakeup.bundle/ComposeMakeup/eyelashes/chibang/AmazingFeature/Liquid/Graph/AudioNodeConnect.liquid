@@ -1,0 +1,19 @@
+        //connect audio graph
+{% for edge in Edges %}
+    {% if edge.edgeValid %}
+        {% if edge.audioStreamConnection %}
+            {% if edge.outputBoundary != true and edge.outputVirtual != true %}
+                {% if edge.inputBoundary == true %}
+        var inputAudioNode = this.inputs[{{edge.inputPortIndex | valid: 'number' }}]();
+                {% else %}
+        var inputAudioNode = this.nodes["{{edge.inputNode | getIdentifierById | valid: 'string' }}"].getOutput({{edge.inputPortIndex | valid: 'number' }});
+                {% endif %}
+        var outputAudioNode = this.nodes["{{edge.outputNode | getIdentifierById | valid: 'string' }}"].audioNode;
+        if (inputAudioNode && outputAudioNode && inputAudioNode !== outputAudioNode){
+            console.log("connect {{edge.inputNode | getIdentifierById | valid: 'string' }} :",inputAudioNode.constructor.name,"{{edge.outputNode | getIdentifierById | valid: 'string' }}:",outputAudioNode.constructor.name);
+            inputAudioNode.connect(outputAudioNode);
+        }       
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

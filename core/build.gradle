@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
+
+        def value = project.findProperty("LICENSE_NAME")
+        if (value instanceof String && !((String) value).isEmpty()) {
+            buildConfigField "String", "LICENSE_NAME", "${value}"
+        } else {
+            buildConfigField "String", "LICENSE_NAME", "\"\""
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+}
+
+dependencies {
+    //noinspection [ByDesign1.5]LocalDependency
+    api project(':library_core')
+    api rootProject.ext.support["localbroadcastmanager"]
+//    api project(':effect-sdk')
+}

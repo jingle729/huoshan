@@ -1,0 +1,128 @@
+const { GraphUtils } = require("./GraphUtils");
+const { BaseGroup } = require('./BaseGroup');
+const { GraphManager } = require('./GraphManager');
+const { AmazEventListener } = require("./AmazEventListener");
+const { ControlFlow } = require("./ControlFlow");
+{% if containAudioGraph %}
+const { AudioGraphAssembler } = require("./AudioGraphAssembler");
+{% endif %}
+{% render "nodeRequire" with nodeList as Nodes %}
+{% render "propertyFuncRequire" with propertyScript as PropertyScripts %}
+const JSAssetRuntimeManager = require('./JSAssetRuntimeManager');
+const APJS = require('./amazingpro');
+{% if isSystem %}
+const { BaseGraph } = require("./BaseGraph");
+class {{ systemName | valid: 'name' }} extends BaseGraph {
+{% else %}
+const { ComponentGraph } = require("./ComponentGraph");
+class {{ systemName | valid: 'name' }} extends ComponentGraph {
+{% endif %}
+    constructor() {
+        super();
+        {% if isSystem %}
+        this.isSystem = {{ isSystem | valid: 'boolean' }};
+        {% endif %}
+    }
+
+    variableInit(){
+        // member variable init
+        {% render "variableInit", variableList: variableList , variableResourceMap: variableResourceMap , arrayVariableRes:arrayVariableRes %}
+    }
+
+    sysInit(){
+        super.sysInit();
+        this.isPreview = {{ isPreview  | valid: 'boolean' }};
+        {% if containAudioGraph %}
+        this.audioAssembler = AudioGraphAssembler.getInstance();
+        this.audioAssembler.isPreview = {{ isPreview  | valid: 'boolean' }};
+        this.audioAssembler.audioRegisterCnt++;
+        {% endif %}
+        // load resource// load resource
+        {% include "loadResource" %}
+        // init variable
+        this.variableInit();
+        //layer name map
+        this.layerNameMap = GraphManager.getInstance().layerNameMap;
+        this.platform = GraphManager.getInstance().platform;
+        this.arch = GraphManager.getInstance().arch;
+
+        this.usingBuiltInMediaPreview = {{ usingBuiltInMediaPreview | valid: 'boolean'}}
+        this.prefabInstanceCountMap = new Map();
+        this.prefabGuidToInstanceMap = new Map();
+
+        //algorithm subgraph map
+        {% if isSystem %}
+        this.algorithmSubgraphMap = new Map();
+            {% for algorithmSubgraph in algorithmSubgraphMap %}
+        this.algorithmSubgraphMap.set("{{algorithmSubgraph[0] | valid:'string'}}", "{{algorithmSubgraph[1] | valid:'string'}}");
+            {% endfor %}
+            {% if isPreview %}
+        try {
+            const {algorithmSubgraphMapEditor} = require('./JSGraphAlgorithmSubgraphMap');
+            this.algorithmSubgraphMap = algorithmSubgraphMapEditor;
+        }catch(e) {
+            console.log('Error loading JSGraphAlgorithmSubgraphMap');
+        };
+            {% endif %}
+        {% else %}
+        this.algorithmSubgraphMap = this.componentAlgorithmMap;
+        {% endif %}
+        
+        GraphUtils.getInstance().printStack = {{ isPreview  | valid: 'boolean' }};
+        this.frameCntNoReset = 0;
+    }
+
+    onInit() {
+        this.sysInit();
+        {% render "nodeInit" , Nodes: nodeList , isPreview: isPreview %}
+        {% render "AudioNodeInit" with nodeList as Nodes , isPreview: isPreview %}
+        {% render "nodeConnect" , Edges: edgeList , isPreview: isPreview , supportedPreviewDataType: supportedPreviewDataType, isSubgraph: false %}
+
+        //init callback table
+{% for node in nodeList %}
+    {% if node.__class == 'PlaceholderNode' or node.__class == 'CommentNode'%}
+        {% continue %}
+    {% endif %}
+    {% if node.onCallback %}
+        {% for callback in node.onCallback %}
+        this.callbackNode["{{ callback | valid: 'string' }}"].push(this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"]);
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+        super.onInit();
+    }
+
+    onReady(){
+        {% render "AudioNodeConnect" with edgeList as Edges %}
+        super.onReady();
+        {% if containAudioGraph %}
+        if(this.audioAssembler){
+            this.audioAssembler.audioInitCnt++;
+            this.audioAssembler.startProxy();
+        };
+        {% endif %}
+    }
+
+    onUpdate(dt) {
+        super.onUpdate(dt);
+        this.frameCntNoReset++;
+        {% if isPreview %}
+        {% render "updataPortData" , Edges: edgeList , supportedPreviewDataType: supportedPreviewDataType %}
+        GraphUtils.flushCachedWatchValues();
+        {% endif %}
+        // this.useGetValueMap = false;
+    }
+
+    onDestroy() {
+        super.onDestroy();
+{% if containAudioGraph %}
+        if(this.audioAssembler){
+            this.audioAssembler.audioDestoryCnt++;
+            this.audioAssembler.releaseProxy();
+            this.audioAssembler = null;
+        }
+{% endif %}
+    }
+};
+
+exports.{{ systemName | valid: 'name' }} = {{ systemName | valid: 'name' }};

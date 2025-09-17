@@ -1,0 +1,102 @@
+{% render "EventRequire", stateChainList: stateChainList %}
+
+class EventPanelSystem extends StateMachineSystem {
+    constructor(){
+        super();
+        this.variables = new Map();
+        this.resources = new Map();
+        this.eventTouchSystem = new EventTouchSystem();
+        {% comment %} this.collisionSystem = new collisionSystem(); {% endcomment %}
+        {% if printLog %}
+        EventPanelUtils.getInstance().printLog = true;
+        {% endif %}
+        {% if printStack %}
+        EventPanelUtils.getInstance().printStack = true;
+        {% endif %}
+    }
+
+    setVariable(key, variable){
+        this.variables.set(key, variable);
+    }
+
+    getVariable(key){
+        return this.variables.get(key);
+    }
+    
+    getVariableByIdentifier(identifier){
+        return Array.from(this.variables.values()).find(variable => variable.identifier === identifier);
+    }
+
+    addResource(key, res){
+        this.resources.set(key, res);
+    }
+
+    getResource(key){
+        return this.resources.get(key);
+    }
+    
+    variableInit(){
+        this.variables = new Map();
+        // render variables
+        {% render "VariableInit", variableList: variableList %}
+    }
+
+    loadResource(){
+        // render resources
+        {% render "LoadResource", resourceArray: resourceArray %}
+    }
+
+    onInit(){
+        this.sys = this;
+        if (this.scene) {
+            this.APJScene = new APJS.Scene(this.scene);
+        }
+        if (this.script) {
+            this.APJScript = new APJS.JSScript(this.script);
+        }
+        this.loadResource();
+        this.variableInit();
+        {% render "StateChainInit", stateChainList: stateChainList %}    
+        super.onInit();
+    }
+
+    onStart(){
+        this.eventTouchSystem.onStart && this.eventTouchSystem.onStart(this);
+        super.onStart();
+    }
+
+    onUpdate(dt){
+        this.eventTouchSystem.onUpdate && this.eventTouchSystem.onUpdate(this,dt);
+        super.onUpdate(dt);
+    }
+
+    onLateUpdate(dt) {
+        this.eventTouchSystem.onLateUpdate && this.eventTouchSystem.onLateUpdate(this,event);
+        super.onLateUpdate(dt);
+    }
+
+    onEvent(event){
+        this.eventTouchSystem.onEvent && this.eventTouchSystem.onEvent(this,event);
+        super.onEvent(event);
+    }
+
+    reset(){
+        this.variables.forEach(variable => variable.reset());
+        this.eventTouchSystem.reset();
+        super.reset();
+    }
+
+    onCallBack(...args){
+        this.eventTouchSystem.onCallBack && this.eventTouchSystem.onCallBack(this, ...args);
+        super.onCallBack(...args);
+    }
+
+    onDestroy() {
+        this.variables.clear();
+        this.eventTouchSystem.onDestroy();
+        super.onDestroy();
+        EventPanelUtils._instance = null;
+    }
+}
+
+exports.EventPanelSystem = EventPanelSystem;

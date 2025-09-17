@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent_black"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_solid_white_radius8"
+        android:layout_width="270dp"
+        android:layout_height="205dp">
+        <TextView
+            android:layout_marginTop="12dp"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="@string/title_extra_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:background="@color/colorGrey"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_solid_white_radius8"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/tv_delete_license"
+                android:gravity="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="删除license缓存"
+                android:textSize="17dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_check_deviceid_type"
+                android:gravity="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="切换deviceId"
+                android:textSize="17dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:gravity="center"
+                android:textColor="@android:color/darker_gray"
+                android:text="待扩充.."
+                android:textSize="17dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            android:text="关闭"
+            android:textSize="17dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</FrameLayout>

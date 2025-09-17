@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ebox_record_root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ebox_recorder_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="10dp"
+        android:src="@drawable/ebox_base_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/ebox_recorder_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/ebox_recorder_back"
+        app:layout_constraintStart_toEndOf="@id/ebox_recorder_back"
+        app:layout_constraintTop_toTopOf="@id/ebox_recorder_back"
+        tools:ignore="SpUsage" />
+
+    <com.volcengine.effectone.widget.MenuToolsView
+        android:id="@+id/ebox_recorder_sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:animateLayoutChanges="true"
+        android:divider="@drawable/ebox_camera_side_divider"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.volcengine.effectone.widget.EORecordButton
+        android:id="@+id/eo_recorder_start_record"
+        android:layout_width="@dimen/eo_recorder_record_button_size"
+        android:layout_height="@dimen/eo_recorder_record_button_size"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eo_recorder_left_container"
+        android:layout_width="104dp"
+        android:layout_height="@dimen/eo_recorder_record_button_size"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/eo_recorder_start_record"
+        app:layout_constraintEnd_toStartOf="@id/eo_recorder_start_record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/eo_recorder_start_record"
+        tools:ignore="UselessLeaf">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/eo_recorder_left_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/eo_camera_effect_sticker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/EffectOne.Camera.AlbumRoundedStyle" />
+
+        <TextView
+            android:id="@+id/eo_recorder_left_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text="美颜美型"
+            android:textColor="@color/TextPrimary"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eo_recorder_left_image"
+            tools:ignore="HardcodedText,SpUsage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eo_recorder_right_container"
+        android:layout_width="104dp"
+        android:layout_height="@dimen/eo_recorder_record_button_size"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/eo_recorder_start_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/eo_recorder_start_record"
+        app:layout_constraintTop_toTopOf="@id/eo_recorder_start_record"
+        tools:ignore="UselessLeaf">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/eo_recorder_album_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:padding="1.25dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/EffectOne.Camera.AlbumRoundedStyle"
+            app:srcCompat="@drawable/ebox_camera_upload"
+            app:strokeColor="@null"
+            app:strokeWidth="2.5dp" />
+
+        <TextView
+            android:id="@+id/eo_recorder_album_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text="@string/eo_camera_upload"
+            android:textColor="@color/TextPrimary"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eo_recorder_album_image"
+            tools:ignore="HardcodedText,SpUsage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

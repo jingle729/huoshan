@@ -1,0 +1,76 @@
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+
+    ndkVersion = "21.3.6528147"
+
+    kotlin_version = "1.4.32"
+    kotlin_corcoutine_version = "1.4.3"
+
+    versions = [:]
+    versions."app-compat" = "1.3.1"
+    versions."gradleVersion" = "4.1.3"
+    versions."service-manager" = "1.0.9.3"
+    versions."glide_version" = "4.3.0"
+    versions."retrofit" = "2.9.0"
+    versions."immersionbar" = "3.2.2"
+    versions."androidxTestJunit" = "1.1.3"
+    versions."androidxTestEspressoCore" = "3.4.0"
+    versions."junit" = "4.13.2"
+
+    versions."vesdk" = "11.3.1.11-onekit-tob"
+    versions."effectsdk" = "202204211854_1_202204211854_fc406dfbabe"
+    versions."nle_version" = "11.9.0.5-rc.0"
+
+    versions."ttffmpeg_version" = "1.1.92.101-tob-biz"
+    versions."boringssl" = "1.0.15"
+    versions."libyuv_version" = "1.0.1"
+    versions."audio_sdk" = "11.16.1-vetob"
+    versions."rangersAppLog_lite_cn" = "6.9.5"
+    versions."ttsdk_version" = "1.32.2.101.onekit"
+    versions."volc_engine_rtc" = "3.39.153"
+
+    // {zh} libs中声明的依赖会统一进行force，force的逻辑见：gradle-config/dependencies-force-rule.gradle {en} The dependencies declared in libs will be unified to force. For the logic of force, see: gradle-config/dependencies-force-rule.gradle
+    libs = [:]
+    libs."app-compat" = "androidx.appcompat:appcompat:${versions["app-compat"]}"
+    libs."appcompat-resources" = "androidx.appcompat:appcompat-resources:${versions["app-compat"]}"
+    libs."kotlin-stdlib-jdk7" = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+    libs."kotlin-stdlib-jdk8" = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}"
+    libs."kotlin-stdlib" = "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
+    libs."androidx-core" = "androidx.core:core:1.6.0"
+    libs."swiperefreshlayout" = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    libs."androidx-lifecycle" = "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    libs."cardview" = "androidx.cardview:cardview:1.0.0"
+    libs."viewpager2" = "androidx.viewpager2:viewpager2:1.0.0"
+    libs."immersionbar" = "com.geyifeng.immersionbar:immersionbar:${versions["immersionbar"]}"
+    libs."immersionbar-ktx" = "com.geyifeng.immersionbar:immersionbar-ktx:${versions["immersionbar"]}"
+    libs."kotlinx-coroutines-android" = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlin_corcoutine_version}"
+    libs."kotlinx-coroutines-core" = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlin_corcoutine_version}"
+    libs."material" = "com.google.android.material:material:1.3.0"
+    libs."constraint-layout" = "androidx.constraintlayout:constraintlayout:2.1.3"
+    libs."recyclerview" = "androidx.recyclerview:recyclerview:1.2.1"
+    libs."gson" = "com.google.code.gson:gson:2.8.0"
+    libs."glide" = "com.github.bumptech.glide:glide:4.3.0"
+    libs."media-picker" = "com.dmcBig.focus:mediapicker:4.7"
+    libs."easy-permission" = "pub.devrel:easypermissions:1.0.0"
+    libs."lottie" = "com.airbnb.android:lottie:2.7.0"
+    libs."adapter-rxjava2" = "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    libs."converter-gson" = "com.squareup.retrofit2:converter-gson:2.9.0"
+    libs."retrofit2" = "com.squareup.retrofit2:retrofit:2.9.0"
+    libs."test-junit" = "androidx.test.ext:junit:${versions["androidxTestJunit"]}"
+    libs."junit" = "junit:junit:${versions["junit"]}"
+    libs."espresso-core" = "androidx.test.espresso:espresso-core:${versions["androidxTestEspressoCore"]}"
+
+    libs."videocache" = "com.danikula:videocache:2.7.1"
+    libs."converter-scalars" = "com.squareup.retrofit2:converter-scalars:2.9.0"
+    libs."exifinterface" = "androidx.exifinterface:exifinterface:1.3.3"
+    libs."jetbrains-annotations" = "org.jetbrains:annotations:15.0"
+    libs."okhttp" = "com.squareup.okhttp3:okhttp:4.9.3"
+    libs."zxing" = "com.google.zxing:core:3.3.3"
+    libs."fragment-rigger" = "com.justkiddingbaby:fragment-rigger:1.4.4"
+    libs."photoview" = "com.github.chrisbanes.photoview:library:1.2.4"
+    libs."smoothprogressbar" = "com.github.castorflex.smoothprogressbar:library:1.1.0"
+    libs."easypermissions" = "pub.devrel:easypermissions:1.0.0"
+}

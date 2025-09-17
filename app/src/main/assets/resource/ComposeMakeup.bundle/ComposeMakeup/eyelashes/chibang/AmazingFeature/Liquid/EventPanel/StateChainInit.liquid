@@ -1,0 +1,32 @@
+{% for chain in stateChainList %}
+        var newChain = new EventStateChain();
+    {% for chainConfig in chain.settings.list  %}
+        newChain.addSetting("{{- chainConfig.key| valid: 'string'-}}", {{ chainConfig.value | getValueExpression }});
+    {% endfor %}
+    {% for state in chain.stateList %}
+        {% if state.type == 'Condition' %}
+        var newState = new ConditionState();
+        {% else %}
+        var newState = new ActionState();
+        {% endif %}
+        {% for stateConfig in state.settings.list %}
+        newState.addSetting("{{- stateConfig.key| valid: 'string' -}}", {{ stateConfig.value | getValueExpression }});
+        {% endfor %}
+        {% for trigger in state.triggerList %}
+        var newTrigger = new {{ trigger.scriptFile| getJSClassName | valid: 'name' }}();
+            {% if trigger.property %}
+        newTrigger.propertyHandler = new {{ trigger.property.script | valid: 'name' }}();
+        newTrigger.valueType =  "{{ trigger.property.valueType | valid: 'string' }}";
+            {% endif %}
+            {% for triggerConfig in trigger.settings.list  %}
+        newTrigger.addSetting("{{- triggerConfig.key | valid: 'string' -}}", {{ triggerConfig.value | getValueExpression }});
+            {% endfor %}
+            {% for event in trigger.events %}
+        newTrigger.events.add("{{event | valid: 'string'}}");
+            {% endfor %}
+        newState.addTrigger(newTrigger); // "{{ trigger.__uniqueId | getIdentifierById | valid: 'string' }}"
+        {% endfor %}
+        newChain.addState(newState); // "{{ state.__uniqueId | getIdentifierById | valid: 'string' }}"
+    {% endfor %}
+        this.addStateChain(newChain); // "{{ chain.__uniqueId | getIdentifierById | valid: 'string' }}"
+{% endfor %}

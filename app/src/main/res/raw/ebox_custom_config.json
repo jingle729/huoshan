@@ -1,0 +1,90 @@
+[
+    {
+        "group": "group_qr_scan",
+        "features": [
+            "feature_qr_scan"
+        ]
+    },
+    {
+        "group": "group_algorithm",
+        "features": [
+            "feature_face",
+            "feature_facefitting",
+            "feature_hand",
+            "feature_skeleton",
+            "feature_pet_face",
+            "feature_head_seg",
+            "feature_portrait",
+            "feature_saliency_matting",
+            "feature_hair_parse",
+            "feature_sky_seg",
+            "feature_chroma_keying",
+            "feature_light",
+            "feature_human_distance",
+            "feature_concentrate",
+            "feature_gaze_estimation",
+            "feature_c1",
+            "feature_c2",
+            "feature_video_cls",
+            "feature_car",
+            "feature_face_verify",
+            "feature_face_cluster",
+            "feature_dynamic_gesture",
+            "feature_skin_segmentation",
+            "feature_bach_skeleton",
+            "feature_slam_algo",
+            "feature_skeleton_3d",
+            "feature_avaboost",
+            "feature_object_tracking"
+        ]
+    },
+    {
+        "group": "group_ar",
+        "features": [
+            "feature_ar_slam",
+            "feature_ar_object",
+            "feature_ar_landmark",
+            "feature_sky_land"
+        ]
+    },
+    {
+        "group": "group_ar_try_on",
+        "features": [
+            "feature_ar_purse",
+            "feature_ar_nail",
+            "feature_ar_shoe",
+            "feature_ar_lipstick",
+            "feature_ar_hat",
+            "feature_ar_necklace",
+            "feature_ar_glasses",
+            "feature_ar_bracelet",
+            "feature_ar_ring",
+            "feature_ar_earrings",
+            "feature_ar_watch",
+            "feature_back_mount"
+        ]
+    },
+    {
+        "group": "group_lens",
+        "features": [
+            "feature_video_sr",
+            "feature_smart_hd",
+            "feature_adaptive_sharpen",
+            "feature_photo_night_scene",
+            "feature_video_frame_insert",
+            "feature_vida",
+            "feature_taint_detect",
+            "feature_cine_move",
+            "feature_video_lite_hdr",
+            "feature_video_deflicker",
+            "feature_video_stab"
+        ]
+    },
+    {
+        "group": "group_sports",
+        "features": [
+            "feature_license_cake",
+            "feature_sport_assistance"
+        ]
+    }
+]

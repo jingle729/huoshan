@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="EBox配置">
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_enable_type"
+            app:title="Ebox开关类型" />
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_app_id"
+            app:title="应用id" />
+        <EditTextPreference
+            android:inputType="text"
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_app_secret"
+            app:title="app Secret" />
+        <EditTextPreference
+            android:inputType="text"
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_app_version"
+            app:title="app 版本" />
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_environment_key"
+            app:title="业务列表环境" />
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_server_environment"
+            app:title="EBox 环境" />
+        <EditTextPreference
+            android:inputType="text"
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_environment_channel"
+            app:title="EBox 泳道" />
+
+        <Preference
+            android:inputType="text"
+            app:iconSpaceReserved="false"
+            app:key="eo_ebox_config_restart"
+            app:summary="配置修改完毕后重启APP生效"
+            app:title="重启App" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.effectsar.labcv.demo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 407020
+        versionName "4.7.2"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("keystore.jks")
+            storePassword "123456"
+            keyAlias "EffectsARSDK"
+            keyPassword "123456"
+        }
+        release {
+            storeFile file("keystore.jks")
+            storePassword "123456"
+            keyAlias "EffectsARSDK"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+//            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+//            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    splits {
+
+        // Configures multiple APKs based on ABI.
+        abi {
+
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for x86 and x86_64.
+
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include 'armeabi-v7a', 'arm64-v8a'
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/*/libnapi.so'
+//        pickFirst 'lib/armeabi-v7a/libnapi.so'
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':lens')
+    implementation project(':sports')
+    implementation project(':algorithm')
+    implementation project(':effect')
+    implementation project(':common')
+    implementation project(':resource')
+    implementation project(':ebox-module')
+
+    implementation rootProject.ext.libs["gson"]
+//    implementation rootProject.ext.dependencies["bugly"]
+    implementation rootProject.ext.libs["recyclerview"]
+    implementation "androidx.preference:preference-ktx:1.2.1"
+//    debugImplementation rootProject.ext.dependencies["leakcanary-debug"]
+//    releaseImplementation rootProject.ext.dependencies["leakcanary-release"]
+}

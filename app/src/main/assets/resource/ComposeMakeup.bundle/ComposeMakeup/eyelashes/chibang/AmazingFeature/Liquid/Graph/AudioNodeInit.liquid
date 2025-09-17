@@ -1,0 +1,22 @@
+{% for node in Nodes %}
+    {% if node.__class == "AudioExtractorNode" or node.__class == "AudioGeneralNode" or node.__class == "AudioMDSPNode" or node.__class == "AudioNode" or node.__class == "AudioEffectNode"%}
+        {% if node.audioNodeName == 'MusicSourceNode' %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].isPreview = {{ isPreview | valid: 'boolean' }};
+        {% endif %}
+        {% if node.onlineMusicSpeaker %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].onlineMusicSpeaker = {{ node.onlineMusicSpeaker | valid: 'boolean' }};
+            {% if node.onlineMusicSpeaker == true %}
+        this.sys.audioAssembler.onlineMusicSpeaker = true;
+            {% endif %}
+        {% endif %}
+        {% if node.hasMicphone %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].hasMicphone = {{ node.hasMicphone | valid: 'boolean' }};
+        {% endif %}
+        {% if node.audioNodeName %}
+        this.sys.audioAssembler.createAudioNode(this, this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"]);
+        {% endif %}
+        {% if node.audioConfigFilePath %}
+            {{- node.audioConfigFilePath | includeAudioConfigPath -}}
+        {% endif %}
+    {% endif %}
+{% endfor %}

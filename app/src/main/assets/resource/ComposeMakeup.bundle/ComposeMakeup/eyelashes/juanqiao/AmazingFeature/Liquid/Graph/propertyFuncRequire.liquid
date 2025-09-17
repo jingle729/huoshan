@@ -1,0 +1,3 @@
+{% for script in PropertyScripts %}
+const { {{ script | getPropertyScriptName  | valid: 'name' }} } = require("./{{script | valid: 'string'}}");
+{% endfor %}

@@ -1,0 +1,50 @@
+{% for node in Nodes %}
+    {% if node.__class == "Group" or node.__class == 'PlaceholderNode' or node.__class == 'CommentNode' or node.__class == 'TemplateGroup' %}
+        {% continue %}
+    {% endif %}
+    {{- node.nodeName | registerNode: node.__uniqueId  -}}
+    {%- assign hasJsFile = node | contained: "fileName" -%}
+    {%- assign hasGuid = node | contained: "templateGuid" -%}
+    {%- assign hasSubgraphFile = node | contained: "subgraphName" -%}
+    {%- assign hasUserScript = node | contained: "userScriptName" -%}
+    {% if hasGuid %}
+        {%-assign hasRegistered = node.fileName | registerJsFile -%}
+        {% if hasRegistered == false %}
+            {% if hasUserScript == false %}
+                {{- node.absolutePath | includeAbsPath -}}
+            {% endif %}
+            {% for releatedScript in node.releatedScriptFile %}
+                {{- releatedScript | includeAbsPath -}}
+            {% endfor %}
+            {%- assign jsClsName = node.fileName | getJSClassName -%}
+            {% if node.fileClassName %}
+const { {{ node.fileClassName | valid: 'name' }} : {{ jsClsName | valid: 'name' }} } = require("./{{ jsClsName | valid: 'name' }}");
+            {% else %}
+const { {{ jsClsName | valid: 'name' }} } = require("./{{ jsClsName | valid: 'name' }}");
+            {% endif %}
+        {% endif %}
+    {% elsif hasJsFile %}
+        {%-assign hasRegistered = node.fileName | registerJsFile -%}
+        {% if hasRegistered == false %}
+            {{- node.absolutePath | includeAbsPath -}}
+            {% for releatedScript in node.releatedScriptFile %}
+                {{- releatedScript | includeAbsPath -}}
+            {% endfor %}
+            {%- assign jsClsName = node.fileName | getJSClassName -%}
+            {% if node.fileClassName %}
+const { {{ node.fileClassName | valid: 'name' }} : {{ jsClsName | valid: 'name' }} } = require("./{{ jsClsName | valid: 'name' }}");
+            {% else %}
+const { {{ jsClsName | valid: 'name' }} } = require("./{{ jsClsName | valid: 'name' }}");
+            {% endif %}
+        {% endif %}
+    {% elsif hasSubgraphFile  %}
+        {% if disableSubgraphRequire %}
+        {% continue %}
+        {% endif %}
+        {%-assign hasRegistered = node.subgraphName | registerJsFile -%}
+        {% if hasRegistered == false %}
+            {%- assign jsClsName = node.subgraphName -%}
+const { {{ jsClsName | valid: 'name' }} } = require("./Subgraph");
+         {% endif %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.volcengine.effectone.widget.nodes.EOSeekBarWithNodeView
+            android:id="@+id/ebox_style_makeup_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@id/ebox_style_makeup_panel_name_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--包一层FrameLayout 实现颜色叠加效果-->
+        <FrameLayout
+            android:id="@+id/ebox_style_makeup_panel_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/eo_base_panel_common_bg"
+            app:layout_constraintBottom_toTopOf="@id/ebox_style_makeup_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ebox_style_makeup_close_item"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+                android:src="@drawable/eo_base_unselect"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@color/ConstLineInverse2" />
+
+            <TextView
+                android:id="@+id/ebox_style_makeup_panel_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:background="@drawable/eo_base_filter_panel_top_corners_bg"
+                android:gravity="center"
+                android:text="@string/feature_style_makeup"
+                android:textColor="@color/TextPrimary"
+                android:textSize="14dp"
+                tools:ignore="SpUsage" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ebox_style_makeup_list"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_gravity="center"
+            android:background="@color/BGPrimary2"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.volcengine.effectone.widget.EOLoadingView
+            android:id="@+id/ebox_style_makeup_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ebox_style_makeup_panel_name_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

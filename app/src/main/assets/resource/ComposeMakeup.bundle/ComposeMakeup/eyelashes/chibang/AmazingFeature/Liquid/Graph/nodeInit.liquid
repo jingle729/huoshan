@@ -1,0 +1,70 @@
+        // node init
+{% for node in Nodes %}
+    {% if node.__class == "Group" or node.__class == 'Placeholder' or node.__class == 'CommentNode' or node.__class == 'TemplateGroup'%}
+        {% continue %}
+    {% endif %}
+    {% if node.__class == "InstanceGroup" %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"] = new {{ node.subgraphName | valid: 'name' }}();
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].id = "{{ node.instanceId | valid: 'string' }}";
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].setRoute(this.route);
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].sys = this.sys;
+        {% comment %} -------------------------------------InstanceGroupNode------------------------------------- {% endcomment %}
+    {% elsif node.__class == "ScriptTemplateNode" %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"] = new {{ node.fileName | getJSClassName | valid: 'name' }}();
+        {% comment %} -------------------------------------TemplateNode------------------------------------- {% endcomment %}
+    {% elsif node.__class == "AudioExtractorNode" or node.__class == "AudioGeneralNode" or node.__class == "AudioMDSPNode" or node.__class == "AudioNode" or node.__class == "AudioEffectNode"%}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"] = new {{ node.fileName | getJSClassName | valid: 'name' }}();
+        {% comment %} -------------------------------------AudioNode------------------------------------- {% endcomment %}
+    {% elsif node.__class == "VariableNode" %}
+        {% comment %} -------------------------------------VariableNode------------------------------------- {% endcomment %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"] = new {{ node.fileName | getJSClassName | valid: 'name' }}();
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].variables = this.sys.variables;
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].localVariables = this.localVariables;
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].variableName = "{{node.uniqueVariableName | valid: 'string' }}";
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].accessType = "{{node.accessType | valid: 'string' }}";
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].valueType = "{{node.variableDataType | valid: 'string' }}"
+    {% else %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"] = new {{ node.fileName | getJSClassName | valid: 'name' }}();
+        {%  if node.__class == "PropertyNode" %}
+            {%  if node.propertyName and node.propertyScript and node.propertyDataType %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].property = "{{node.propertyName | valid: 'string' }}";
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].propertyFunc = new {{ node.propertyScript | getPropertyScriptName | valid: 'name' }}();
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].valueType = "{{node.propertyDataType | valid: 'string' }}";
+        // Cache Init Value for Pins
+        if (this.nodes["{{node.__uniqueId | getIdentifierById | valid: 'string' }}"].constructor.name.startsWith("CGSet")){
+            this.callbackNode["beforeStart"].push(this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"]);
+                {% if node.propertyScript == "AnimatorProperty" %}
+            this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].propertySetingFun = (obj)=> { this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].propertyFunc.initWrapModes([obj], {{ node.wrapModes  | valid: 'number array' }})};
+                {% endif %}
+        }
+        {{- node.propertyScriptAbsPath | includeAbsPath -}}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+     {% if node.releatedRes %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].releatedRes = new Map();
+        {% for res in node.releatedRes %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].releatedRes.set("{{res[0]}}", this.sys.resource["{{res[1]}}"]);
+        {% endfor %}
+    {% endif %}
+
+
+    {%- assign hasSelectedType = node | contained: "curSelectedType" -%}
+    {% if hasSelectedType %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].valueType = "{{node.curSelectedType | valid: 'string' }}";
+    {% endif %}
+
+    {%- assign needInputPortNumber = node | contained: "inputPortNumber" -%}
+    {% if needInputPortNumber %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].inputPortNum = {{node.inputPortNumber | valid: 'number' }};
+    {% endif %}
+    {% comment %} -------------------------------------unconnected input port------------------------------------- {% endcomment %}
+    {% for port in node.inputPorts %}
+        {% if port.isConnect == false %}
+            {% if port.valueTypeName != "Pulse" %}
+        this.nodes["{{ node.__uniqueId | getIdentifierById | valid: 'string' }}"].setInput({{port.portIndex | valid: 'number' }}, ()=>{ return {{port | getPortValueExpression}}; });
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
